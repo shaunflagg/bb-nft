@@ -74,6 +74,7 @@ pub contract AllCodeNFTContract {
         }
     }
 
+    //The init contract is required if the contract contains any fields
     init() {
           self.account.save(<-self.createEmptyCollection(), to: /storage/NFTCollection)
           self.account.link<&{NFTReceiver}>(/public/NFTReceiver, target: /storage/NFTCollection)
