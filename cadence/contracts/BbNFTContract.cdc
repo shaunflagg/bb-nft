@@ -1,4 +1,4 @@
-pub contract AllCodeNFTContract {
+pub contract BbNFTContract {
     pub resource NFT {
         pub let id: UInt64
         init(initID: UInt64) {

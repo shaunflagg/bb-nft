@@ -1,15 +1,15 @@
-import AllCodeNFTContract from 0xf8d6e0586b0a20c7
+import BbNFTContract from 0xf8d6e0586b0a20c7
 
 transaction {
-  let receiverRef: &{AllCodeNFTContract.NFTReceiver}
-  let minterRef: &AllCodeNFTContract.NFTMinter
+  let receiverRef: &{BbNFTContract.NFTReceiver}
+  let minterRef: &BbNFTContract.NFTMinter
 
   prepare(acct: AuthAccount) {
-      self.receiverRef = acct.getCapability<&{AllCodeNFTContract.NFTReceiver}>(/public/NFTReceiver)
+      self.receiverRef = acct.getCapability<&{BbNFTContract.NFTReceiver}>(/public/NFTReceiver)
           .borrow()
           ?? panic("Could not borrow receiver reference")
 
-      self.minterRef = acct.borrow<&AllCodeNFTContract.NFTMinter>(from: /storage/NFTMinter)
+      self.minterRef = acct.borrow<&BbNFTContract.NFTMinter>(from: /storage/NFTMinter)
           ?? panic("could not borrow minter reference")
   }
 
