@@ -15,11 +15,11 @@ transaction {
 
   execute {
       let metadata : {String : String} = {
-          "name": "AllCode Logo",
-          "street_address": "Fillmore Street",
-          "phone_number": "415-890-6431",
-          "email": "joel@allcode.com",
-          "uri": "ipfs://QmVH5T7MFVU52hTfQdWvu73iFPEF3jizuGfyVLccTmBCX2"
+          "name": "Shaun Flagg",
+          "street_address": "Techwood",
+          "phone_number": "770-000-0000",
+          "email": "sflagg@warnermedia.com",
+          "uri": "ipfs://QmcP2JQtX8aBvFPE7Mr2WsCgiLNRyBQmYWFcjgDheiXGwJ"
       }
       let newNFT <- self.minterRef.mintNFT()
 
